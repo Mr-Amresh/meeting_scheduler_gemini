@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 # 🔹 Configure Gemini API
 # 🔹 Gemini API Configuration
-GEMINI_API_KEY = "AIzaSyACqjXQAfqP2NX3pcAwdbQ3XX_-Z_MJZqY"  # Replace with actual key
+GEMINI_API_KEY = " "  # Replace with actual key
 try:
     genai.configure(api_key=GEMINI_API_KEY)
     llm = genai.GenerativeModel('gemini-1.5-flash-001-tuning')
@@ -24,8 +24,8 @@ except Exception as e:
     llm = None
 
 # 🔹 Configure Supabase
-SUPABASE_URL = "https://hvbzuubgxfobyfgchgpr.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh2Ynp1dWJneGZvYnlmZ2NoZ3ByIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc0MDEwMTIsImV4cCI6MjA2Mjk3NzAxMn0.YJA-rpFVVIaYjqCULSgvepGYyGynrIUF1pksjHAaJhI"
+SUPABASE_URL = "link"
+SUPABASE_KEY = "key"
 try:
     supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
     supabase.table("meetings").select("*").limit(1).execute()
