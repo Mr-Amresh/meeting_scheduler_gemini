@@ -58,13 +58,13 @@ A Streamlit-based web application for scheduling meetings using a conversational
    - Download the JSON file as `credentials.json` and place it in the project root:
      ```
      agentic-meeting-scheduler/
-     ├── agentic_chatbot.py
+     ├── app.py
      ├── requirements.txt
      ├── credentials.json
      ```
 
 ### Supabase
-1. In your Supabase project (`https://hvbzuubgxfobyfgchgpr.supabase.co`):
+1. In your Supabase project (`link`):
    - Create a `meetings` table with:
      - `event_id` (text, primary key)
      - `title` (text)
@@ -83,15 +83,15 @@ A Streamlit-based web application for scheduling meetings using a conversational
          agenda TEXT
      );
      ```
-2. Verify Supabase credentials in `agentic_chatbot.py`:
+2. Verify Supabase credentials in `app.py`:
    ```python
-   SUPABASE_URL = "https://hvbzuubgxfobyfgchgpr.supabase.co"
-   SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh2Ynp1dWJneGZvYnlmZ2NoZ3ByIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc0MDEwMTIsImV4cCI6MjA2Mjk3NzAxMn0.YJA-rpFVVIaYjqCULSgvepGYyGynrIUF1pksjHAaJhI"
+   SUPABASE_URL = "link"
+   SUPABASE_KEY = "give key "
    ```
 
 ### Google Gemini API
 1. Obtain an API key from [Google AI Studio](https://aistudio.google.com/).
-2. Update `GEMINI_API_KEY` in `agentic_chatbot.py`:
+2. Update `GEMINI_API_KEY` in `app.py`:
    ```python
    GEMINI_API_KEY = "your-gemini-api-key"
    ```
@@ -113,7 +113,7 @@ A Streamlit-based web application for scheduling meetings using a conversational
      - Title (e.g., Team Meeting)
      - Description (e.g., Discuss Q2 progress)
      - Agenda (e.g., 1. Project updates\n2. Budget review)
-     - Attendees (e.g., `maithiligeek@gmail.com, akyadav13398@gmail.com`)
+     - Attendees (e.g., samplemodi@gmail.com, sampletrump@gmail.com)
    - Click **Propose Meeting**.
    - In the chat, type “Confirm the meeting” to schedule.
 
@@ -135,12 +135,12 @@ A Streamlit-based web application for scheduling meetings using a conversational
 - Title: Team Meeting
 - Description: Discuss Q2 progress
 - Agenda: 1. Project updates\n2. Budget review
-- Attendees: maithiligeek@gmail.com, akyadav13398@gmail.com
+- Attendees: samplemodi@gmail.com, sampletrump@gmail.com
 
 **Chat Output**:
 ```
-You: Proposed meeting: Team Meeting on 2025-05-19 00:00 Asia/Kolkata with maithiligeek@gmail.com, akyadav13398@gmail.com
-Bot: I’ve noted your proposed meeting titled “Team Meeting” on May 19, 2025, at 12:00 AM IST with attendees maithiligeek@gmail.com, akyadav13398@gmail.com. Description: Discuss Q2 progress. Agenda: 1. Project updates\n2. Budget review. Please confirm to schedule or let me know if you’d like to make changes.
+You: Proposed meeting: Team Meeting on 2025-05-19 00:00 Asia/Kolkata with samplemodi@gmail.com, sampletrump@gmail.com
+Bot: I’ve noted your proposed meeting titled “Team Meeting” on May 19, 2025, at 12:00 AM IST with attendees samplemodi@gmail.com, sampletrump@gmail.com. Description: Discuss Q2 progress. Agenda: 1. Project updates\n2. Budget review. Please confirm to schedule or let me know if you’d like to make changes.
 You: Confirm the meeting
 Bot: Meeting scheduled successfully! Event ID: [unique_id]. Check your Google Calendar and email for confirmation.
 ```
@@ -166,7 +166,7 @@ Bot: Meeting scheduled successfully! Event ID: [unique_id]. Check your Google Ca
   - Check terminal logs for “Supabase insert failed”.
 
 - **Gemini API Issues**:
-  - Replace the placeholder API key (`AIzaSyACqjXQAfqP2NX3pcAwdbQ3XX_-Z_MJZqY`).
+  - Replace the placeholder API key (`AIzaSyACqj...... your api key`).
   - If `gemini-1.5-flash-001-tuning` fails, try `gemini-1.5-flash`.
 
 ## Contributing
